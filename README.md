@@ -30,4 +30,6 @@ This project adheres to semantic versioning
 
 ## Testing
 
-### install "release" version with `flutter build apk` and `adb install build/app/outputs/apk/release/app-release.apk`
+### install "release"
+- version with `flutter build apk` and `adb install build/app/outputs/apk/release/app-release.apk`
+
