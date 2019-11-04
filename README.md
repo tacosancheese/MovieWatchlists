@@ -23,12 +23,11 @@ A new Flutter application.
 
 See pubspec.yaml
 
-
 ## Versioning
 This project adheres to semantic versioning
 
 ## Release
 
-
 ## Testing
 
+### install "release" version with `flutter build apk` and `adb install build/app/outputs/apk/release/app-release.apk`
