@@ -1,0 +1,419 @@
+{
+  "page": 1,
+  "total_results": 427366,
+  "total_pages": 21369,
+  "results": [
+    {
+      "vote_count": 617,
+      "id": 420818,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "The Lion King",
+      "popularity": 581.731,
+      "poster_path": "\/dzBtMocZuJbjLOXvrl4zGYigDzh.jpg",
+      "original_language": "en",
+      "original_title": "The Lion King",
+      "genre_ids": [
+        12,
+        16,
+        10751,
+        18,
+        28
+      ],
+      "backdrop_path": "\/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
+      "adult": false,
+      "overview": "Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother\u2014and former heir to the throne\u2014has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
+      "release_date": "2019-07-12"
+    },
+    {
+      "vote_count": 2235,
+      "id": 429617,
+      "video": false,
+      "vote_average": 7.8,
+      "title": "Spider-Man: Far from Home",
+      "popularity": 293.777,
+      "poster_path": "\/rjbNpRMoVvqHmhmksbokcyCr7wn.jpg",
+      "original_language": "en",
+      "original_title": "Spider-Man: Far from Home",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "backdrop_path": "\/dihW2yTsvQlust7mSuAqJDtqW7k.jpg",
+      "adult": false,
+      "overview": "Peter Parker and his friends go on a summer trip to Europe. However, they will hardly be able to rest - Peter will have to agree to help Nick Fury uncover the mystery of creatures that cause natural disasters and destruction throughout the continent.",
+      "release_date": "2019-06-28"
+    },
+    {
+      "vote_count": 2672,
+      "id": 399579,
+      "video": false,
+      "vote_average": 6.8,
+      "title": "Alita: Battle Angel",
+      "popularity": 165.544,
+      "poster_path": "\/xRWht48C2V8XNfzvPehyClOvDni.jpg",
+      "original_language": "en",
+      "original_title": "Alita: Battle Angel",
+      "genre_ids": [
+        28,
+        878,
+        53,
+        12
+      ],
+      "backdrop_path": "\/8RKBHHRqOMOLh5qW3sS6TSFTd8h.jpg",
+      "adult": false,
+      "overview": "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.",
+      "release_date": "2019-01-31"
+    },
+    {
+      "vote_count": 21,
+      "id": 566555,
+      "video": false,
+      "vote_average": 5,
+      "title": "Detective Conan: The Fist of Blue Sapphire",
+      "popularity": 155.12,
+      "poster_path": "\/86Y6qM8zTn3PFVfCm9J98Ph7JEB.jpg",
+      "original_language": "ja",
+      "original_title": "\u540d\u63a2\u5075\u30b3\u30ca\u30f3 \u7d3a\u9752\u306e\u62f3\uff08\u30d5\u30a3\u30b9\u30c8\uff09",
+      "genre_ids": [
+        16,
+        28,
+        18,
+        9648,
+        35
+      ],
+      "backdrop_path": "\/wf6VDSi4aFCZfuD8sX8JAKLfJ5m.jpg",
+      "adult": false,
+      "overview": "23rd movie in the \"Detective Conan\" franchise.",
+      "release_date": "2019-04-12"
+    },
+    {
+      "vote_count": 6469,
+      "id": 299537,
+      "video": false,
+      "vote_average": 7,
+      "title": "Captain Marvel",
+      "popularity": 152.538,
+      "poster_path": "\/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+      "original_language": "en",
+      "original_title": "Captain Marvel",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "backdrop_path": "\/n1C1PrbEuAYV8VkzvmbAfEiWvZo.jpg",
+      "adult": false,
+      "overview": "The story follows Carol Danvers as she becomes one of the universe\u2019s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+      "release_date": "2019-03-06"
+    },
+    {
+      "vote_count": 1507,
+      "id": 301528,
+      "video": false,
+      "vote_average": 7.7,
+      "title": "Toy Story 4",
+      "popularity": 146.107,
+      "poster_path": "\/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
+      "original_language": "en",
+      "original_title": "Toy Story 4",
+      "genre_ids": [
+        12,
+        16,
+        35,
+        10751
+      ],
+      "backdrop_path": "\/m67smI1IIMmYzCl9axvKNULVKLr.jpg",
+      "adult": false,
+      "overview": "Woody has always been confident about his place in the world and that his priority is taking care of his kid, whether that's Andy or Bonnie. But when Bonnie adds a reluctant new toy called \"Forky\" to her room, a road trip adventure alongside old and new friends will show Woody how big the world can be for a toy.",
+      "release_date": "2019-06-19"
+    },
+    {
+      "vote_count": 520,
+      "id": 479455,
+      "video": false,
+      "vote_average": 5.9,
+      "title": "Men in Black: International",
+      "popularity": 128.967,
+      "poster_path": "\/dPrUPFcgLfNbmDL8V69vcrTyEfb.jpg",
+      "original_language": "en",
+      "original_title": "Men in Black: International",
+      "genre_ids": [
+        28,
+        35,
+        878,
+        12
+      ],
+      "backdrop_path": "\/2FYzxgLNuNVwncilzUeCGbOQzP7.jpg",
+      "adult": false,
+      "overview": "The Men in Black have always protected the Earth from the scum of the universe. In this new adventure, they tackle their biggest, most global threat to date: a mole in the Men in Black organization.",
+      "release_date": "2019-06-12"
+    },
+    {
+      "vote_count": 49,
+      "id": 458302,
+      "video": false,
+      "vote_average": 7.6,
+      "title": "Remi Nobody's Boy",
+      "popularity": 120.931,
+      "poster_path": "\/2FcsGbtrm3slpH0gKnW2DxXMvEj.jpg",
+      "original_language": "fr",
+      "original_title": "R\u00e9mi sans famille",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "backdrop_path": "\/4aFtD31RpP018y8XipTLrU8Y3pa.jpg",
+      "adult": false,
+      "overview": "The adventures of the young R\u00e9mi, an orphan, collected by the gentle Madam Barberin. At the age of 10 years, he is snatched from his adoptive mother and entrusted to the signor Vitalis, a mysterious itinerant musician. Has its sides, he will learn the harsh life of acrobat and sing to win his bread. Accompanied by the faithful dog capi and of the small monkey Joli-Coeur, his long trip through France, made for meetings, friendships and mutual assistance, leads him to the secret of its origins.",
+      "release_date": "2018-12-12"
+    },
+    {
+      "vote_count": 2568,
+      "id": 287947,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "Shazam!",
+      "popularity": 118.543,
+      "poster_path": "\/xnopI5Xtky18MPhK40cZAGAOVeV.jpg",
+      "original_language": "en",
+      "original_title": "Shazam!",
+      "genre_ids": [
+        28,
+        35,
+        14
+      ],
+      "backdrop_path": "\/bi4jh0Kt0uuZGsGJoUUfqmbrjQg.jpg",
+      "adult": false,
+      "overview": "A boy is given the ability to become an adult superhero in times of need with a single magic word.",
+      "release_date": "2019-03-23"
+    },
+    {
+      "vote_count": 1609,
+      "id": 458156,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "John Wick: Chapter 3 \u2013 Parabellum",
+      "popularity": 117.996,
+      "poster_path": "\/ziEuG1essDuWuC5lpWUaw1uXY2O.jpg",
+      "original_language": "en",
+      "original_title": "John Wick: Chapter 3 \u2013 Parabellum",
+      "genre_ids": [
+        80,
+        28,
+        53
+      ],
+      "backdrop_path": "\/vVpEOvdxVBP2aV166j5Xlvb5Cdc.jpg",
+      "adult": false,
+      "overview": "Super-assassin John Wick returns with a $14 million price tag on his head and an army of bounty-hunting killers on his trail. After killing a member of the shadowy international assassin\u2019s guild, the High Table, John Wick is excommunicado, but the world\u2019s most ruthless hit men and women await his every turn.",
+      "release_date": "2019-05-15"
+    },
+    {
+      "vote_count": 7874,
+      "id": 299534,
+      "video": false,
+      "vote_average": 8.4,
+      "title": "Avengers: Endgame",
+      "popularity": 115.275,
+      "poster_path": "\/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+      "original_language": "en",
+      "original_title": "Avengers: Endgame",
+      "genre_ids": [
+        12,
+        878,
+        28
+      ],
+      "backdrop_path": "\/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+      "adult": false,
+      "overview": "After the devastating events of Avengers: Infinity War, the universe is in ruins due to the efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos' actions and restore order to the universe once and for all, no matter what consequences may be in store.",
+      "release_date": "2019-04-24"
+    },
+    {
+      "vote_count": 1698,
+      "id": 447404,
+      "video": false,
+      "vote_average": 7,
+      "title": "Pok\u00e9mon Detective Pikachu",
+      "popularity": 114.533,
+      "poster_path": "\/wgQ7APnFpf1TuviKHXeEe3KnsTV.jpg",
+      "original_language": "en",
+      "original_title": "Pok\u00e9mon Detective Pikachu",
+      "genre_ids": [
+        9648,
+        10751,
+        35,
+        878,
+        28,
+        12
+      ],
+      "backdrop_path": "\/nDP33LmQwNsnPv29GQazz59HjJI.jpg",
+      "adult": false,
+      "overview": "In a world where people collect pocket-size monsters (Pok\u00e9mon) to do battle, a boy comes across an intelligent monster who seeks to be a detective.",
+      "release_date": "2019-05-03"
+    },
+    {
+      "vote_count": 7759,
+      "id": 920,
+      "video": false,
+      "vote_average": 6.7,
+      "title": "Cars",
+      "popularity": 102.412,
+      "poster_path": "\/jpfkzbIXgKZqCZAkEkFH2VYF63s.jpg",
+      "original_language": "en",
+      "original_title": "Cars",
+      "genre_ids": [
+        16,
+        12,
+        35,
+        10751
+      ],
+      "backdrop_path": "\/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg",
+      "adult": false,
+      "overview": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the big Piston Cup Championship in California to compete against two seasoned pros, McQueen gets to know the town's offbeat characters.",
+      "release_date": "2006-06-08"
+    },
+    {
+      "vote_count": 708,
+      "id": 456740,
+      "video": false,
+      "vote_average": 5,
+      "title": "Hellboy",
+      "popularity": 93.891,
+      "poster_path": "\/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg",
+      "original_language": "en",
+      "original_title": "Hellboy",
+      "genre_ids": [
+        28,
+        12,
+        14,
+        27,
+        878
+      ],
+      "backdrop_path": "\/5BkSkNtfrnTuKOtTaZhl8avn4wU.jpg",
+      "adult": false,
+      "overview": "Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away.",
+      "release_date": "2019-04-10"
+    },
+    {
+      "vote_count": 14493,
+      "id": 299536,
+      "video": false,
+      "vote_average": 8.3,
+      "title": "Avengers: Infinity War",
+      "popularity": 91.903,
+      "poster_path": "\/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "original_language": "en",
+      "original_title": "Avengers: Infinity War",
+      "genre_ids": [
+        12,
+        28,
+        878
+      ],
+      "backdrop_path": "\/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg",
+      "adult": false,
+      "overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+      "release_date": "2018-04-25"
+    },
+    {
+      "vote_count": 209,
+      "id": 459992,
+      "video": false,
+      "vote_average": 6.9,
+      "title": "Long Shot",
+      "popularity": 89.678,
+      "poster_path": "\/m2ttWZ8rMRwIMT7zA48Jo6mTkDS.jpg",
+      "original_language": "en",
+      "original_title": "Long Shot",
+      "genre_ids": [
+        35,
+        10749
+      ],
+      "backdrop_path": "\/88r25ghJzVYKq0vaOApqEOZsQlD.jpg",
+      "adult": false,
+      "overview": "When Fred Flarsky reunites with and charms his first crush, Charlotte Field\u2014one of the most influential women in the world. As Charlotte prepares to make a run for the Presidency, she hires Fred as her speechwriter and sparks fly.",
+      "release_date": "2019-05-02"
+    },
+    {
+      "vote_count": 153,
+      "id": 612152,
+      "video": false,
+      "vote_average": 5.7,
+      "title": "Secret Obsession",
+      "popularity": 82.966,
+      "poster_path": "\/iKMeE6oYzBVzhA6xLGb8PPWEruF.jpg",
+      "original_language": "en",
+      "original_title": "Secret Obsession",
+      "genre_ids": [
+        18,
+        53
+      ],
+      "backdrop_path": "\/uQUlZIyrVmOfVVj2JRrPmRcn6M1.jpg",
+      "adult": false,
+      "overview": "Newlywed Jennifer is brutally attacked at a dark rest stop. While healing from her injuries, she can\u2019t recall anything from her past, including the ordeal. Her husband, Russell , is just thankful she\u2019s alive and eager to get her home. As he reintroduces her to their secluded mountain estate, Detective Page  pursues Jennifer\u2019s assailant \u2014 his own daughter went missing and was never found. The same fate now awaits Jennifer, unless someone realizes that her loving caretaker is actually her captor.",
+      "release_date": "2019-07-18"
+    },
+    {
+      "vote_count": 2324,
+      "id": 420817,
+      "video": false,
+      "vote_average": 7.1,
+      "title": "Aladdin",
+      "popularity": 82.266,
+      "poster_path": "\/3iYQTLGoy7QnjcUYRJy4YrAgGvp.jpg",
+      "original_language": "en",
+      "original_title": "Aladdin",
+      "genre_ids": [
+        12,
+        14,
+        10749,
+        35,
+        10751
+      ],
+      "backdrop_path": "\/v4yVTbbl8dE1UP2dWu5CLyaXOku.jpg",
+      "adult": false,
+      "overview": "A kindhearted street urchin named Aladdin embarks on a magical adventure after finding a lamp that releases a wisecracking genie while a power-hungry Grand Vizier vies for the same lamp that has the power to make their deepest wishes come true.",
+      "release_date": "2019-05-22"
+    },
+    {
+      "vote_count": 0,
+      "id": 613473,
+      "video": false,
+      "vote_average": 0,
+      "title": "Burglary",
+      "popularity": 81.642,
+      "poster_path": "\/xztkk3qwvjTfKArjTkhWUCuadFY.jpg",
+      "original_language": "en",
+      "original_title": "Burglary",
+      "genre_ids": [
+        27,
+        53,
+        9648
+      ],
+      "backdrop_path": null,
+      "adult": false,
+      "overview": "While playing videogames Mike spots a mysterious masked man outside his building.",
+      "release_date": "2019-07-19"
+    },
+    {
+      "vote_count": 484,
+      "id": 480414,
+      "video": false,
+      "vote_average": 5.6,
+      "title": "The Curse of La Llorona",
+      "popularity": 80.442,
+      "poster_path": "\/jhZlXSnFUpNiLAek9EkPrtLEWQI.jpg",
+      "original_language": "en",
+      "original_title": "The Curse of La Llorona",
+      "genre_ids": [
+        53,
+        27,
+        9648
+      ],
+      "backdrop_path": "\/9p5BuzUNcvCltQAIiDLILEsH0dk.jpg",
+      "adult": false,
+      "overview": "A social worker dealing with the disappearance of two children fears for her own family after beginning the investigation.",
+      "release_date": "2019-04-17"
+    }
+  ]
+}
