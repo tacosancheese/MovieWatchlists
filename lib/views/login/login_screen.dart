@@ -10,7 +10,7 @@ import 'package:movie_watchlists/widgets/widget_factory.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
 
   static createRoute(final BuildContext ctx) {
     Navigator.pushAndRemoveUntil(ctx,
@@ -20,82 +20,91 @@ class LoginScreen extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext ctx) {
-    return Scaffold(
-        body: _LoginContentWidget()
-    );
-  }
+  State<StatefulWidget> createState() => _LoginState();
 }
 
-class _LoginContentWidget extends StatelessWidget {
+class _LoginState extends State<LoginScreen> {
+
+  LoginBloc _bloc;
+
+  @override
+  void didChangeDependencies() {
+    final handler = Provider.of<AuthHandler>(context);
+    _bloc= LoginBloc(handler: handler);
+    super.didChangeDependencies();
+  }
+
+  @override
+  void dispose() {
+    _bloc.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    debugPrint("LOGIN!");
-    return Consumer<LoginBloc> (
-      builder: (ctx, bloc, child) {
-        return StreamBuilder(
-          stream: bloc.view,
-          builder: (ctx, AsyncSnapshot<LoginView> snapshot) {
-            final view = snapshot.data;
-            if (view == null) {
-              return WidgetFactory.createProgressWidget();
-            }
+    return Scaffold(
+      body: StreamBuilder(
+        stream: _bloc.view,
+        builder: (ctx, AsyncSnapshot<LoginView> snapshot) {
+          final view = snapshot.data;
+          if (view == null) {
+            return WidgetFactory.createProgressWidget();
+          }
 
-            if (view.isLoading) {
-              return WidgetFactory.createProgressWidget();
-            }
+          if (view.isLoading) {
+            return WidgetFactory.createProgressWidget();
+          }
 
-            if (view.hasLoggedIn) {
-              WidgetsBinding.instance.addPostFrameCallback((_) {
-                HomeScreen.createRoute(ctx);
-              });
+          if (view.hasLoggedIn) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              HomeScreen.createRoute(ctx);
+            });
 
-              return WidgetFactory.createProgressWidget();
-            }
+            return WidgetFactory.createProgressWidget();
+          }
 
-            if (view.hasError) {
-              Scaffold.of(context).showSnackBar(
-                SnackBar(content: Text('Whoopsie, something went wrong')));
-            }
+          if (view.hasError) {
+            Scaffold.of(context).showSnackBar(
+              SnackBar(content: Text('Whoopsie, something went wrong')));
+          }
 
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: <Widget>[
-                _HeaderWidget(),
-                Expanded(
-                  child: Container(
-                    width: double.infinity,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-                      child: AnimatedSwitcher(
-                        duration: const Duration(milliseconds: 300),
-                        child: view.hasAcceptedTerms ?
-                        _LoginWidgets(
-                          key: Key("login"),
-                          bloc: bloc,
-                          viewState: view.state,
-                        ) :
-                        _IntroWidget(
-                          key: Key("intro"),
-                          bloc: bloc,
-                          viewState: view.state,
-                        )
+          return Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              _HeaderWidget(),
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 16, vertical: 24),
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 300),
+                      child: view.hasAcceptedTerms ?
+                      _LoginWidgets(
+                        key: Key("login"),
+                        bloc: _bloc,
+                        viewState: view.state,
+                      ) :
+                      _IntroWidget(
+                        key: Key("intro"),
+                        bloc: _bloc,
+                        viewState: view.state,
                       )
-                    ),
+                    )
                   ),
                 ),
-                _TermsAndConditionsWidget(
-                  bloc: bloc,
-                  view: view
-                ),
-              ],
-            );
-          },
-        );
-      }
+              ),
+              _TermsAndConditionsWidget(
+                bloc: _bloc,
+                view: view
+              ),
+            ],
+          );
+        },
+      )
     );
   }
 }

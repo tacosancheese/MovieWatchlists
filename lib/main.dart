@@ -3,10 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:http/http.dart';
-import 'package:movie_watchlists/blocs/detail/detail_bloc.dart';
-import 'package:movie_watchlists/blocs/login_bloc.dart';
-import 'package:movie_watchlists/blocs/settings_bloc.dart';
-import 'package:movie_watchlists/blocs/watchlist_create_bloc.dart';
 import 'package:movie_watchlists/data/api/api_tmdb.dart';
 import 'package:movie_watchlists/data/api/tmdb_user_config.dart';
 import 'package:movie_watchlists/data/preferences/user_preferences.dart';
@@ -19,9 +15,11 @@ import 'package:movie_watchlists/views/login/login_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'blocs/watchlist_detail_bloc.dart';
+import 'blocs/authentication_bloc.dart';
 import 'data/auth/auth_handler.dart';
 import 'data/repos/user_repository.dart';
+import 'views/home/home_screen.dart';
+import 'widgets/widget_factory.dart';
 
 void main() async {
 
@@ -65,6 +63,10 @@ void main() async {
     handler: handler
   );
 
+  final AuthenticationBloc authBloc = AuthenticationBloc(
+    handler: handler
+  );
+
   runApp(
     MultiProvider(
       providers: [
@@ -92,26 +94,56 @@ void main() async {
         Provider<WatchlistRepository>(
           builder: (ctx) => watchlistRepo,
         ),
-        Provider<LoginBloc>(
+        Provider<AuthenticationBloc>(
+          builder: (ctx) => authBloc,
           dispose: (ctx, bloc) => bloc.dispose(),
-          builder: (ctx) => LoginBloc(handler: handler),
-        ),
-        Provider<WatchlistDetailBloc>(
-          dispose: (ctx, bloc) => bloc.dispose(),
-          builder: (_) => WatchlistDetailBloc(
-            movieRepo: movieRepo,
-            userRepo: userRepo,
-            watchListRepo: watchlistRepo
-          ),
-        ),
+        )
       ],
       child: MaterialApp(
         theme: ThemeData(
           brightness: Brightness.dark,
           primaryColor: Colors.black,
         ),
-        home: LoginScreen(),
-      )
+        home:_AuthenticationView()
+      ),
     )
   );
+}
+
+class _AuthenticationView extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext ctx) {
+    final authBloc = Provider.of<AuthenticationBloc>(ctx);
+
+    return Scaffold(
+      body: StreamBuilder(
+        builder: (ctx, AsyncSnapshot<AuthenticationView> snapshot) {
+          if (snapshot == null || snapshot.data == null) {
+            return WidgetFactory.createProgressWidget();
+          }
+
+          final view = snapshot.data;
+          if (view.isLoading) {
+            debugPrint("AuthenticationView => isLoading");
+            return WidgetFactory.createProgressWidget();
+          }
+
+          if (view.hasError || view.isUnAuthenticated) {
+            debugPrint("AuthenticationView => "
+              "hasError || view.isUnAuthenticated");
+            return LoginScreen();
+          }
+
+          debugPrint("AuthenticationView => HomeScreen");
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            HomeScreen.createRoute(ctx);
+          });
+
+          return WidgetFactory.createProgressWidget();
+        },
+        stream: authBloc.authView
+      ),
+    );
+  }
 }

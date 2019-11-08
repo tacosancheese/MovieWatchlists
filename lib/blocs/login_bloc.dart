@@ -42,11 +42,8 @@ class LoginView extends Equatable {
         error = null;
 
   bool get hasAcceptedTerms => _viewState == LoginViewState.TERMS_ACCEPTED;
-
   bool get hasLoggedIn => _viewState == LoginViewState.LOGGED_IN;
-
   bool get hasError => _viewState == LoginViewState.ERROR;
-
   bool get isLoading => _viewState == LoginViewState.LOADING;
 
   @override
@@ -90,28 +87,9 @@ class LoginBloc extends BaseBloc {
         .distinct()
         .debounceTime(Duration(milliseconds: 200));
 
-    // resume user session
-    final Observable<LoginView> resumeSession =
-        Observable.fromFuture(Future.value(AuthType.GOOGLE_FIREBASE))
-            .map((authType) => authType)
-            .flatMap((_) => Observable.fromFuture(handler.resume()))
-            .delay(Duration(milliseconds: 500))
-            .flatMap((result) {
-      if (result.hasError) {
-        if (result.exception is LoginRequiredException) {
-          return Observable.just(LoginView.ready());
-        } else {
-          return Observable.just(LoginView.error(exception: result.exception));
-        }
-      }
-
-      return Observable.just(LoginView.loggedIn(handler: handler));
-    }).share();
-
     // terms
     final Observable<LoginView> termsState = onTermsChanged
-        .map((value) => value ? LoginView.acceptedTerms() : LoginView.ready())
-        .skip(1);
+        .map((value) => value ? LoginView.acceptedTerms() : LoginView.ready());
 
     // login via Google
     final Observable<LoginView> loginState = loginObservable
@@ -125,18 +103,10 @@ class LoginBloc extends BaseBloc {
       return LoginView.loggedIn(handler: handler);
     });
 
-    // loading
-    final Observable<LoginView> loadingState =
-        loginObservable.map((_) => LoginView.loading());
-
     // combined state
-    final Observable<LoginView> loginViewState =
-        Observable.merge([loadingState, loginState]);
-
-    final Observable<LoginView> viewState =
-        Observable.merge([resumeSession, termsState, loginViewState])
-            .doOnEach((view) => debugPrint(view.toString()))
-            .startWith(LoginView.loading());
+    final Observable<LoginView> viewState = Observable.merge([termsState, loginState])
+      .doOnEach((view) => debugPrint(view.toString()))
+      .startWith(LoginView.loading());
 
     return LoginBloc._(
         view: viewState,
