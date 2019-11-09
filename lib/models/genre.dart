@@ -1,9 +1,14 @@
+import 'package:flutter/foundation.dart';
+
 class Genre {
 
   final int id;
   final String name;
 
-  Genre(this.id, this.name);
+  Genre({
+    @required this.id,
+    @required this.name
+  });
 
   Genre.fromJson(final Map<String, dynamic> json) :
       id = json["id"],

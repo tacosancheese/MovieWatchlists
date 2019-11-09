@@ -1,3 +1,3 @@
 enum SearchCategory {
-  MOVIE, PEOPLE, TVSHOW
+  MOVIE, PEOPLE, TV_SHOW
 }

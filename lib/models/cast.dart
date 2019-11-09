@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/foundation.dart';
 
 class Cast extends Equatable {
 
@@ -11,7 +12,16 @@ class Cast extends Equatable {
   final int order;
   final String profilePath;
 
-  Cast._(this.castId, this.character, this.creditId, this.gender, this.id, this.name, this.order, this.profilePath);
+  Cast._({
+    @required this.castId,
+    @required this.character,
+    @required this.creditId,
+    @required this.gender,
+    @required this.id,
+    @required this.name,
+    @required this.order,
+    @required this.profilePath
+  });
 
   Cast._fromJson(final Map<String, dynamic> json) :
     castId = json["cast_id"],

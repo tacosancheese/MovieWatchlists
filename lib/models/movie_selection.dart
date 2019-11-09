@@ -1,1 +1,3 @@
-enum MovieSelection { UPCOMING, POPULAR }
+enum MovieSelection {
+  UPCOMING, POPULAR
+}

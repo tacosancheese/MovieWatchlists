@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:movie_watchlists/models/movie.dart';
+import 'package:movie_watchlists/models/movie_with_genres.dart';
 import 'package:movie_watchlists/models/movie_details.dart';
 import 'package:movie_watchlists/shared/config/palette.dart';
 import 'package:movie_watchlists/views/detail/movie_cast_widget.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_watchlists/data/repos/movie_repository.dart';
-import 'package:movie_watchlists/models/movie_.dart';
+import 'package:movie_watchlists/models/movie.dart';
 import 'package:movie_watchlists/models/movie_details.dart';
 import 'package:movie_watchlists/models/movie_selection.dart';
 import 'package:movie_watchlists/shared/result.dart';
@@ -18,9 +18,9 @@ main() async {
     );
 
     final json = await readJsonStringFromFile(MOVIES_JSON_PATH);
-    final items = Movie_.fromJsonResponse(json);
+    final items = Movie.fromJsonResponse(json);
 
-    final Result<List<Movie_>, Exception> result = Result.success(items);
+    final Result<List<Movie>, Exception> result = Result.success(items);
     when(mockApi.movies(MovieSelection.POPULAR))
       .thenAnswer((_) => Future.value(result));
 

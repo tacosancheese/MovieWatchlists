@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_watchlists/models/movie.dart';
+import 'package:movie_watchlists/models/movie_with_genres.dart';
 import 'package:movie_watchlists/shared/config/palette.dart';
 import 'package:movie_watchlists/views/detail/movie_details_screen.dart';
 import 'package:movie_watchlists/widgets/progress_widget.dart';
@@ -11,7 +11,7 @@ class MovieTextCell extends StatelessWidget {
   final double cellHeight = 140;
   final double cellWidth = 100;
 
-  final Movie item;
+  final MovieWithGenres item;
 
   const MovieTextCell(this.item);
 
@@ -84,7 +84,8 @@ class MovieTextCell extends StatelessWidget {
     );
   }
 
-  Widget _createImageWidget(final Movie movie) {
+  Widget _createImageWidget(final MovieWithGenres movie) {
+    debugPrint(movie.smallPosterPathUrl);
     if (movie.hasPosterUrl) {
       return CachedNetworkImage(
         fit: BoxFit.cover,

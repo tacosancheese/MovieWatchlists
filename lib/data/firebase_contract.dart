@@ -49,5 +49,6 @@ abstract class FirebaseContract {
   static const FIELD_MOVIE_TITLE = "title";
   static const FIELD_MOVIE_OVERVIEW = "overview";
   static const FIELD_MOVIE_POSTER_URL = "posterPathUrl";
+  static const FIELD_MOVIE_BACKDROP_URL = "backdropPathUrl";
   static const FIELD_MOVIE_GENRES = "genres";
 }

@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import 'package:movie_watchlists/data/api/tmdb_user_config.dart';
 import 'package:movie_watchlists/models/cast.dart';
 import 'package:movie_watchlists/models/genre.dart';
-import 'package:movie_watchlists/models/movie_.dart';
+import 'package:movie_watchlists/models/movie.dart';
 import 'package:movie_watchlists/models/movie_details.dart';
 import 'package:movie_watchlists/models/movie_selection.dart';
 import 'package:movie_watchlists/shared/result.dart';
@@ -84,7 +84,7 @@ class ApiTmdb {
   }
 
   // https://api.themoviedb.org/3/movie/popular?api_key=<<api_key>>
-  Future<Result<List<Movie_>, Exception>> movies(
+  Future<Result<List<Movie>, Exception>> movies(
     final MovieSelection selection) async {
 
     final params = {
@@ -100,12 +100,12 @@ class ApiTmdb {
       uri = Uri.https(_BASE_URL, '/3/movie/upcoming', params);
     }
 
-    final Result<List<Movie_>, Exception> Function(Exception e) func =
+    final Result<List<Movie>, Exception> Function(Exception e) func =
       (Exception e) { return Result.failure(e); };
 
     return await _performGetRequest(
       uri: uri,
-      onSuccess: (dynamic json) => Result.success(Movie_.fromJsonResponse(json)),
+      onSuccess: (dynamic json) => Result.success(Movie.fromJsonResponse(json)),
       onFailure: (Exception e) => func(e)
     );
   }

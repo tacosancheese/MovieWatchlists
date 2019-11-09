@@ -87,10 +87,12 @@ class WatchlistMovieTextCell extends StatelessWidget {
   }
 
   Widget _createImageWidget(final WatchlistMovie movie) {
-    if (movie.posterUrl.isNotEmpty) {
+    final String url = movie.tmdbImage.smallPosterPathUrl;
+    debugPrint(url);
+    if (url.isNotEmpty) {
       return CachedNetworkImage(
         fit: BoxFit.cover,
-        imageUrl: item.posterUrl,
+        imageUrl: url,
         imageBuilder: (ctx, imageProvider) =>
           Container(
             height: cellHeight,

@@ -4,7 +4,7 @@ import 'package:mockito/mockito.dart';
 import 'package:movie_watchlists/data/api/api_tmdb.dart';
 import 'package:movie_watchlists/models/cast.dart';
 import 'package:movie_watchlists/models/genre.dart';
-import 'package:movie_watchlists/models/movie_.dart';
+import 'package:movie_watchlists/models/movie.dart';
 import 'package:movie_watchlists/models/movie_details.dart';
 import 'package:movie_watchlists/models/movie_selection.dart';
 import 'package:movie_watchlists/shared/result.dart';
@@ -24,7 +24,7 @@ void main() {
       userConfig: config
     );
 
-    final Result<List<Movie_>, Exception> result = await api.movies(MovieSelection.UPCOMING);
+    final Result<List<Movie>, Exception> result = await api.movies(MovieSelection.UPCOMING);
 
     expect(result.result, isNotNull);
   });
@@ -194,7 +194,7 @@ void main() {
       userConfig: config
     );
 
-    final Result<List<Movie_>, Exception> result = await api.movies(MovieSelection.UPCOMING);
+    final Result<List<Movie>, Exception> result = await api.movies(MovieSelection.UPCOMING);
 
     expect(result.result, isNotNull);
   });

@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/foundation.dart';
 import 'package:movie_watchlists/models/genre.dart';
+import 'package:movie_watchlists/models/movie_with_genres.dart';
 import 'package:movie_watchlists/models/movie.dart';
-import 'package:movie_watchlists/models/movie_.dart';
 import 'package:movie_watchlists/models/movie_selection.dart';
 import 'package:movie_watchlists/data/repos/genre_repository.dart';
 import 'package:movie_watchlists/data/repos/movie_repository.dart';
@@ -15,7 +15,7 @@ import 'package:rxdart/rxdart.dart';
 class DiscoveryView extends Equatable {
 
   final DiscoveryViewState viewState;
-  final List<Movie> items;
+  final List<MovieWithGenres> items;
   final Exception error;
 
   DiscoveryView.error(final Exception e):
@@ -23,7 +23,7 @@ class DiscoveryView extends Equatable {
         items = [],
         error = e;
 
-  DiscoveryView.loaded(final List<Movie> movies):
+  DiscoveryView.loaded(final List<MovieWithGenres> movies):
         viewState = DiscoveryViewState.LOADED,
         items = movies,
         error = null;
@@ -107,7 +107,7 @@ class DiscoveryBloc extends BaseBloc {
   }
 
   static DiscoveryView _combineResults(
-    final Result<List<Movie_>, Exception> movieResult,
+    final Result<List<Movie>, Exception> movieResult,
     final Result<List<Genre>, Exception> genreResult) {
     if (movieResult.hasError) {
       return DiscoveryView.error(movieResult.exception);
@@ -118,7 +118,7 @@ class DiscoveryBloc extends BaseBloc {
     }
 
     return DiscoveryView.loaded(
-      Movie.toMovies(movieResult.result, genreResult.result)
+      MovieWithGenres.toMovies(movieResult.result, genreResult.result)
     );
   }
 

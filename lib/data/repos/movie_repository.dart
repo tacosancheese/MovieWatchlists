@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:movie_watchlists/data/api/api_tmdb.dart';
-import 'package:movie_watchlists/models/movie_.dart';
+import 'package:movie_watchlists/models/movie.dart';
 import 'package:movie_watchlists/models/movie_details.dart';
 import 'package:movie_watchlists/models/movie_selection.dart';
 import 'package:movie_watchlists/shared/base_repository.dart';
@@ -9,7 +9,7 @@ import 'package:movie_watchlists/shared/result.dart';
 class MovieRepository implements BaseRepository {
 
   final ApiTmdb _api;
-  final Map<MovieSelection, List<Movie_>> _cachedSelections;
+  final Map<MovieSelection, List<Movie>> _cachedSelections;
 
   MovieRepository({
     @required ApiTmdb api
@@ -20,7 +20,7 @@ class MovieRepository implements BaseRepository {
     // TODO: implement dispose
   }
 
-  Future<Result<List<Movie_>, Exception>> all(final MovieSelection selection) {
+  Future<Result<List<Movie>, Exception>> all(final MovieSelection selection) {
     debugPrint("MovieRepository => all " + selection.toString());
 
     if (_cachedSelections.containsKey(selection)) {
@@ -33,9 +33,9 @@ class MovieRepository implements BaseRepository {
       .catchError((err) => debugPrint("MovieRepository: error $err"));
   }
 
-  Future<Result<List<Movie_>, Exception>>_cacheResult(
+  Future<Result<List<Movie>, Exception>>_cacheResult(
     final MovieSelection selection,
-    final Result<List<Movie_>, Exception> result) {
+    final Result<List<Movie>, Exception> result) {
     if (result.hasResult) {
       debugPrint("GenreRepository => about to cache result");
       _cachedSelections.putIfAbsent(selection, () => result.result);
