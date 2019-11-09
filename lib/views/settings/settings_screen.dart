@@ -73,7 +73,7 @@ class SettingsState extends State<SettingsScreen> {
           }
 
           return ListView(
-            padding: EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+            padding: EdgeInsets.symmetric(horizontal: 18, vertical: 4),
             shrinkWrap: true,
             children: <Widget>[
               Column(
