@@ -25,4 +25,26 @@ main () {
     expect(movie.genres, isNotEmpty);
     expect(movie.watchedByIds, isNotEmpty);
   });
+
+  test('should serialize', () {
+    final movie = WatchlistMovie(
+      id: 1,
+      title: "title",
+      addedById: "123",
+      genres: ["action"],
+      overview: "overview",
+      posterUrl: "posterUrl",
+      watchedByIds: ["123"]
+    );
+
+    final snapshot = movie.toSnapshot();
+
+    expect(snapshot[FirebaseContract.FIELD_ID], equals(1));
+    expect(snapshot[FirebaseContract.FIELD_MOVIE_TITLE], equals("title"));
+    expect(snapshot[FirebaseContract.FIELD_MOVIE_OVERVIEW], equals("overview"));
+    expect(snapshot[FirebaseContract.FIELD_MOVIE_POSTER_URL], equals("posterUrl"));
+    expect(snapshot[FirebaseContract.FIELD_ADDED_BY], isNotEmpty);
+    expect(snapshot[FirebaseContract.FIELD_MOVIE_GENRES], isNotEmpty);
+    expect(snapshot[FirebaseContract.FIELD_WATCHED_BY], isNotEmpty);
+  });
 }
