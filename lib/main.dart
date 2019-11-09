@@ -118,6 +118,7 @@ class _AuthenticationView extends StatelessWidget {
 
     return Scaffold(
       body: StreamBuilder(
+        stream: authBloc.authView,
         builder: (ctx, AsyncSnapshot<AuthenticationView> snapshot) {
           if (snapshot == null || snapshot.data == null) {
             return WidgetFactory.createProgressWidget();
@@ -142,7 +143,6 @@ class _AuthenticationView extends StatelessWidget {
 
           return WidgetFactory.createProgressWidget();
         },
-        stream: authBloc.authView
       ),
     );
   }
